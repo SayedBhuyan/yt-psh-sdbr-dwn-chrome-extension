@@ -1,0 +1,26 @@
+/* Push everything under the video player (title, channel, Subscribe,
+   like/share buttons, description, comments) AND the related-videos
+   column down so they sit below the visible area. Scroll to reach them.
+   Change the value to push further or less; use 0 to disable. */
+ytd-watch-flexy {
+  --push-down: 15vh;
+}
+
+/* Title, channel, Subscribe, like/dislike/share/download row, description, comments */
+ytd-watch-flexy #below {
+  margin-top: var(--push-down) !important;
+}
+
+/* Related videos column (All / From ... / Related chips + list) */
+ytd-watch-flexy #secondary,
+ytd-watch-flexy #secondary-inner {
+  margin-top: var(--push-down) !important;
+}
+
+/* Prefer to hide them completely instead? Replace the rules above with:
+
+ytd-watch-flexy #below,
+ytd-watch-flexy #secondary {
+  display: none !important;
+}
+*/

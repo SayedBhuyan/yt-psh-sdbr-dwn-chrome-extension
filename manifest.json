@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Push Down YouTube Sidebar",
+  "version": "1.0",
+  "description": "Pushes the YouTube related-videos section below the fold so it's out of sight while watching.",
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "css": ["sidebar.css"],
+      "run_at": "document_start"
+    }
+  ]
+}
